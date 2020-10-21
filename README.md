@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # acg-talk-web  
 
 > https://muse-ui.org/#/zh-CN
@@ -11,14 +10,7 @@ npm install axios --save
 npm install --save js-cookie
 npm install --save clipboard
 
-=======
-# acg-talk-web
 
-## Project setup
-```
->>>>>>> e65270c3aade407f2611685874bccf1e04a1feb8
-npm install
-```
 
 ### Compiles and hot-reloads for development
 ```

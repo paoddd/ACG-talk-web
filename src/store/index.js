@@ -12,8 +12,4 @@ export default new Vuex.Store({
   },
   modules: {
   }
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> e65270c3aade407f2611685874bccf1e04a1feb8

@@ -1,5 +1,4 @@
 import Vue from 'vue'
-<<<<<<< HEAD
 import App from './App'
 import store from './store'
 import router from './router'
@@ -22,14 +21,6 @@ Vue.use(Vuex)
 Vue.config.productionTip = false
 
 
-=======
-import App from './App.vue'
-import router from './router'
-import store from './store'
-
-Vue.config.productionTip = false
-
->>>>>>> e65270c3aade407f2611685874bccf1e04a1feb8
 new Vue({
   router,
   store,
