@@ -31,7 +31,7 @@ const routes = [
       {
         path: '/me',
         name: 'Me',
-        component: ()=> import('@/views/my-info/index')
+        component: () => import('@/views/my-info/index')
       },
     ]
   },
@@ -39,7 +39,12 @@ const routes = [
     path: '/icon',
     name: 'About',
     component: () => import('@/views/icon-copy/icon-list')
-  }
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import('@/views/search/index')
+  },
 ]
 
 const router = new VueRouter({

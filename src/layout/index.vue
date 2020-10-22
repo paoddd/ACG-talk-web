@@ -5,9 +5,13 @@
       <mu-button icon slot="left" @click="openDrawer">
         <mu-icon value="menu"></mu-icon>
       </mu-button>
-      Title
+         <mu-button icon class="search-btn" @click="toSearch">
+          <mu-icon value="search"></mu-icon>
+        </mu-button>
       <mu-menu slot="right">
-        <mu-button flat>MENU</mu-button>
+        <mu-button flat>
+          <mu-icon value="more_horiz"></mu-icon>
+        </mu-button>
         <mu-list slot="content">
           <mu-list-item button>
             <mu-list-item-content>
@@ -24,28 +28,29 @@
     </mu-appbar>
     <!-- 抽屉 -->
     <drawer-main ref="drawer" />
-    <app-main class="app-main"/>    
+    <app-main class="app-main" />
   </div>
 </template>
 
 <script>
-import DrawerMain from "./components/DrawerMain"
-import AppMain from "./components/AppMain"
+import DrawerMain from "./components/DrawerMain";
+import AppMain from "./components/AppMain";
 export default {
   name: "Layout",
   components: {
     AppMain,
-    DrawerMain
+    DrawerMain,
   },
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {
     openDrawer() {
-      this.$refs.drawer.open = true
+      this.$refs.drawer.open = true;
     },
+    toSearch(){
+      this.$router.push('/search')
+    }
   },
 };
 </script>
@@ -55,8 +60,10 @@ export default {
   position: sticky;
   top: 0;
 }
-.app-main{
-
+.app-main {
   padding-bottom: 10vh;
+}
+.search-btn{
+  float:right
 }
 </style>
