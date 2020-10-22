@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view class="myapp"/>
+    <router-view class="myapp" />
   </div>
 </template>
 <style>
@@ -11,10 +11,12 @@
   text-align: center;
   color: #2c3e50;
 }
-.myapp{
+.myapp {
   /*top: 0px;*/
   /*bottom: 0px;*/
   height: 100%;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 </style>

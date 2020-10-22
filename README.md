@@ -9,6 +9,7 @@ npm install -S nprogress
 npm install axios --save
 npm install --save js-cookie
 npm install --save clipboard
+npm install muse-ui-toast -S
 
 
 

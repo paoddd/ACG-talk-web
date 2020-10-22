@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 导航条 -->
-    <mu-appbar style="width: 100%" color="primary" class="appbar">
+    <mu-appbar style="width: 100%" class="appbar">
       <mu-button icon slot="left" @click="openDrawer">
         <mu-icon value="menu"></mu-icon>
       </mu-button>
@@ -23,41 +23,28 @@
       </mu-menu>
     </mu-appbar>
     <!-- 抽屉 -->
-    <mu-drawer :open.sync="open" :docked="docked" :right="position === 'right'">
-      <mu-list>
-        <mu-list-item button>
-          <mu-list-item-title>Menu Item 1</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button>
-          <mu-list-item-title>Menu Item 2</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item @click="open = false" button>
-          <mu-list-item-title>Close</mu-list-item-title>
-        </mu-list-item>
-      </mu-list>
-    </mu-drawer>
-
-    <app-main />
+    <drawer-main ref="drawer" />
+    <app-main class="app-main"/>    
   </div>
 </template>
 
 <script>
-import AppMain from "./components/AppMain";
+import DrawerMain from "./components/DrawerMain"
+import AppMain from "./components/AppMain"
 export default {
   name: "Layout",
   components: {
     AppMain,
+    DrawerMain
   },
   data() {
     return {
-      open: false,
-      position: "left",
-      docked: false,
+      
     };
   },
   methods: {
     openDrawer() {
-      this.open = true;
+      this.$refs.drawer.open = true
     },
   },
 };
@@ -67,5 +54,9 @@ export default {
 .appbar {
   position: sticky;
   top: 0;
+}
+.app-main{
+
+  padding-bottom: 10vh;
 }
 </style>

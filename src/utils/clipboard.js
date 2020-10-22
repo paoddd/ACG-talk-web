@@ -3,11 +3,11 @@ import Vue from 'vue'
 import Clipboard from 'clipboard'
 
 function clipboardSuccess() {
-  Vue.prototype.$toast('Copy Success')
+  Vue.prototype.$toast.success('Copy Success')
 }
 
 function clipboardError() {
-  Vue.prototype.$toast('Copy failed')
+  Vue.prototype.$toast.error('Copy failed')
 }
 
 export default function handleClipboard(text, event) {

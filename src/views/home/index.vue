@@ -10,6 +10,6 @@ export default {
   name: "Home",
   components:{
     TalkList
-  }
+  },
 };
 </script>
