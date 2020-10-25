@@ -11,11 +11,17 @@ const routes = [
     name: 'redirect',
     component: Layout,
     redirect: '/home',
+    meta:{
+      keepAlive:true 
+   },
     children: [
       {
         path: '/index',
         name: 'Index',
         component: index,
+        meta:{
+          keepAlive:true //需要被缓存的组件
+       },
         children: [{
           path: '/home',
           name: 'Index',
