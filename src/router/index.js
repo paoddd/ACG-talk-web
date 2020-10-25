@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import index from '@/layout/index'
 import Layout from '@/layout/Layout'
+import PageLayout from '@/layout/PageLayout'
 Vue.use(VueRouter)
 
 const routes = [
@@ -45,6 +46,17 @@ const routes = [
     name: 'Search',
     component: () => import('@/views/search/index')
   },
+  {
+    path: '/page',
+    name: 'Page',
+    component: PageLayout,
+    children:[{
+      path: '/article',
+      name: 'Article',
+      component: () => import('@/views/talk-article/index')
+    },
+    ]
+  }
 ]
 
 const router = new VueRouter({

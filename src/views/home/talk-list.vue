@@ -9,8 +9,8 @@
       >
         <mu-flex justify-content="center">
           <mu-paper :z-depth="1">
-            <mu-grid-list class="gridlist-demo">
-              <mu-grid-tile
+            <mu-grid-list>
+              <mu-grid-tile @click="toArticle"
                 v-for="(tile, index) in list"
                 :key="index"
                 class="grid-item"
@@ -102,6 +102,9 @@ export default {
     };
   },
   methods: {
+    toArticle(){
+      this.$router.push('/article')
+    },
     refresh() {
       this.refreshing = true;
       this.$refs.container.scrollTop = 0;

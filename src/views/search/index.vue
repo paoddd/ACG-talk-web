@@ -12,9 +12,12 @@
       >
       </mu-text-field>
       <mu-button flat class="cancel-btn" @click="exitSearch">
-        <b> 取 消</b>  
+        <b> 取 消</b>
       </mu-button>
     </div>
+    <!--
+      <img v-lazy="imgSrc" :key="imgSrc" @error="handleLazyErr" style="width: 100%;"> 
+    -->
   </div>
 </template>
 
@@ -24,15 +27,19 @@ export default {
   data() {
     return {
       searchText: "",
+      imgSrc: "http://p4.qhimg.com/bdm/960_593_0/t014a4670b3066516dc.jpg",
     };
   },
   methods: {
+    handleLazyErr(e) {
+      console.log(e);
+    },
     cancelBtn() {
       this.searchText = "";
     },
-    exitSearch(){
-        this.$router.go(-1)
-    }
+    exitSearch() {
+      this.$router.go(-1);
+    },
   },
   mounted() {},
 };

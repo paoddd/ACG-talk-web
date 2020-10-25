@@ -2,84 +2,87 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <!--浏览器兼容模式用最新的文档渲染模式-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title><%= htmlWebpackPlugin.options.title %></title>
-  <style>
-    .loading-area {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        margin: -50px 0 0 -40px;
-        width: 80px;
-        height: 100px;
-        border-radius: 4px;
-    }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!--浏览器兼容模式用最新的文档渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+        @keyframes ldio-rpinwye8j0b {
+            0% {
+                transform: rotate(0deg)
+            }
 
-    .icon-timer {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -15px 0 0 -15px;
-        width: 10vh;
-        height: 10vh;
-        border-radius: 50%;
-        background-color: #fff;
-    }
+            50% {
+                transform: rotate(180deg)
+            }
 
-    .icon-timer:before, .icon-timer:after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        margin-left: -1px;
-        width: 2px;
-        height: 8px;
-        background-color: #333;
-        -webkit-transform-origin: 50% 100%;
-        -ms-transform-origin: 50% 100%;
-        transform-origin: 50% 100%; 
-        /*transform-origin: center bottom;*/
-    }
-    .icon-timer:before {
-        /*-webkit-animation: hourhand 24s linear infinite;*/
-        animation: hourhand 24s linear infinite;
-    }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
 
-    .icon-timer:after {
-        height: 12px;
-        /*-webkit-animation: minutehand 2s linear infinite;*/
-        animation: minutehand 2s linear infinite;
-    }
+        .ldio-rpinwye8j0b div {
+            position: absolute;
+            animation: ldio-rpinwye8j0b 1s linear infinite;
+            width: 16vh;
+            height: 16vh;
+            top: 2vh;
+            left: 2vh;
+            border-radius: 50%;
+            box-shadow: 0 4px 0 0 #e15b64;
+            transform-origin: 8vh 8vh;
+        }
 
-    @keyframes hourhand {
-        0% {transform: rotate(0deg)}
-        100% {transform: rotate(360deg);}
-    }
+        .loadingio-eclipse {
+            width: 20vh;
+            height: 20vh;
+            display: inline-block;
+            overflow: hidden;
+        }
 
-    @keyframes minutehand {
-        0% {transform: rotate(0deg)}
-        100% {transform: rotate(360deg);}
-    }
-</style>
+        .ldio-rpinwye8j0b {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: translateZ(0) scale(1);
+            backface-visibility: hidden;
+            transform-origin: 0 0;
+            /* see note above */
+        }
+
+        .ldio-rpinwye8j0b div {
+            box-sizing: content-box;
+        }
+
+        .loading-position {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+    </style>
 
 </head>
 
 <body>
-  <div class="loading-area">
-    <i class="icon-timer"></i>
-</div>
-  <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-      Please enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-  <!-- built files will be auto injected -->
+    <div class="loadingio-eclipse loading-position" id="Loading">
+        <div class="ldio-rpinwye8j0b">
+            <div>
+            </div>
+        </div>
+    </div>
+    <noscript>
+        <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+            Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
 </body>
 
 </html>

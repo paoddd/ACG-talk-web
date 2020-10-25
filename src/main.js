@@ -10,6 +10,9 @@ import 'muse-ui/dist/muse-ui.css'
 import 'typeface-roboto'
 import 'material-design-icons/iconfont/material-icons.css'
 
+//  图片懒加载
+import VueLazyload from 'vue-lazyload'
+
 //  注册自己写的组件
 // import Toast from './components/toast'
 // Vue.use(Toast)
@@ -32,6 +35,14 @@ Vue.use(Vuex)
 
 Vue.config.productionTip = false
 
+Vue.use(VueLazyload, {
+  preLoad: 1,// 预加载高度
+  loading: require('./assets/img/loading.gif'),//加载中图片，一定要有，不然会一直重复加载占位图
+  error: require('./assets/img/error.png'),  //加载失败图片
+  dispatchEvent: true,//  开启原生dom事件
+  attempt: 2,//尝试计数	
+  listenEvents:['scroll'] //想要监听的事件	['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend', 'touchmove']
+});
 
 new Vue({
   router,

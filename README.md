@@ -10,8 +10,9 @@ npm install axios --save
 npm install --save js-cookie
 npm install --save clipboard
 npm install muse-ui-toast -S
+npm install vue-lazyload --save-dev
 
-
+npm install
 
 ### Compiles and hot-reloads for development
 ```
